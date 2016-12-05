@@ -1,0 +1,274 @@
+body {
+  font: 100% "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.column {
+  background-color: #999;
+  width: 900px;
+  margin: 50px auto 50px auto;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+
+@media only screen
+  and (max-width: 768px) {
+    .column {
+      width: 600px;
+      margin: 50px auto 50px auto;
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+}
+
+@media only screen
+  and (max-width: 576px) {
+    .column {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 50px;
+      padding-top: 50px;
+    }
+}
+
+/**** card body ****/
+.user-card {
+  /*box-sizing: border-box;*/
+  background-color: #FFF;
+  border: 0;
+  text-align: left;
+  width: 600px;
+  border-radius: 10px;
+
+  /* position card within column*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user-card__hero-img {
+  display: block;
+  height: 300px;
+  background: url(../images/sf.jpg);
+  background-size: 100%;
+  background-position: 0 50%;
+  /*border-bottom: 1px solid #e1e8ed;*/
+  border-radius: 10px 10px 0 0;
+}
+
+.user-card__content {
+  margin: 10px 40px;
+  position: relative;
+}
+
+/* card body media queries */
+@media only screen
+  and (max-width: 768px) {
+    .user-card {
+      width: 400px
+    }
+
+    .user-card__hero-img {
+      height: 200px;
+    }
+
+    .user-card__content {
+      margin: 10px 20px;
+    }
+}
+
+@media only screen
+  and (max-width: 576px) {
+    .user-card {
+      width: 300px
+    }
+
+    .user-card__hero-img {
+      height: 150px;
+    }
+
+    .user-card__content {
+      margin: 5px 10px;
+    }
+}
+/**** end card body ****/
+
+/**** car controls ****/
+.icon__btn {
+  display: inline-block;
+  background-color: #FFF;
+  position: relative;
+  vertical-align: bottom;
+  z-index: 1;
+  border-radius: 6px;
+  margin: -85px 2px 0 -3px;
+  padding: 6px;
+}
+
+.icon__img {
+  border: 0;
+  display: block;
+  border-radius: 6px;
+  height: 140px;
+  width: 140px;
+}
+
+.user-card__btn {
+  float: right;
+  background-color: #FFF;
+  color: #1DA1F2;
+  border: 2px solid #1DA1F2;
+  margin-top: 5px;
+  padding: 5px 30px;
+  border-radius: 12px;
+  font-size: 20px;
+}
+
+.user-card__btn--active {
+  background-color: #1DA1F2;
+  color: #FFF;
+}
+
+.user-card__btn:focus {
+  outline: none;
+}
+
+/* card controls media queries */
+@media only screen
+  and (max-width: 768px) {
+    .icon__btn {
+      border-radius: 6px;
+      margin: -55px 2px 0 -3px;
+      padding: 4px;
+    }
+
+    .icon__img {
+      border-radius: 6px;
+      height: 80px;
+      width: 80px;
+    }
+
+    .user-card__btn {
+      border: 2px solid #1DA1F2;
+      margin-top: 5px;
+      padding: 5px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+    }
+}
+
+@media only screen
+  and (max-width: 576px) {
+    .icon__btn {
+      border-radius: 3px;
+      padding: 2px;
+    }
+
+    .icon__img {
+      border-radius: 3px;
+      height: 40px;
+      width: 40px;
+    }
+
+    .user-card__btn {
+      border: 1px solid #1DA1F2;
+      margin-top: 2px;
+      padding: 2px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 300;
+    }
+}
+/**** end card controls ****/
+
+/**** card text ****/
+.user-card__text h3 {
+  color: #292F33;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.user-card__paragraph {
+  color: #66757f;
+  line-height: 1.4em;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.user-card__paragraph a {
+  color: #1DA1F2;
+}
+
+.user-card__footer {
+  color: #66757f;
+  line-height: 1.4em;
+  word-wrap: break-word;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.user-card__footer p {
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* card text media queries */
+@media only screen
+  and (max-width: 768px) {
+  .user-card__text h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .user-card__paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.2em;
+  }
+
+  .user-card__footer {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .user-card__footer p {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen
+  and (max-width: 576px) {
+  .user-card__text h3 {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weigth: 200;
+  }
+
+  .user-card__paragraph {
+    font-size: 13px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .user-card__footer {
+    font-size: 11px;
+  }
+
+  .user-card__footer p {
+    margin-bottom: 10px;
+  }
+}
+/**** end card text ****/
